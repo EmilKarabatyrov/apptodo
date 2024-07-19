@@ -1,11 +1,11 @@
 import React from "react";
-import TodoForm from "./TodoForm/TodoForm";
+import TodoTaskList from "./TodoForm/TodoTaskList";
 import TodoFooter from "../TodoFooter/TodoFooter";
 import "./TodoMain.css";
-const TodoMain = () => {
+const TodoMain = ({ tasks, onClick, onDelete }) => {
   return (
     <section className="main">
-      <TodoForm className="todo-list" />
+      <TodoTaskList tasks={tasks} onClick={onClick} onDelete={onDelete} />
       <TodoFooter />
     </section>
   );
