@@ -1,14 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import "./TodoHeader.css";
-const TodoHeader = () => {
+import PropTypes from "prop-types";
+
+const TodoHeader = ({ addTodo }) => {
+  TodoHeader.defaultProps = {
+    addTodo: () => {},
+  };
+  TodoHeader.propTypes = {
+    addTodo: PropTypes.func,
+  };
+
+  const [value, setValue] = useState("");
+  const addNewTodo = (e) => {
+    e.preventDefault();
+    addTodo(value);
+    setValue("");
+  };
   return (
     <header className="header">
       <h1>todos</h1>
-      <input
-        className="new-todo"
-        placeholder="What needs to be done?"
-        autoFocus
-      />
+      <form onSubmit={addNewTodo}>
+        <input
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+          className="new-todo"
+          placeholder="What needs to be done?"
+          autoFocus
+        />
+      </form>
     </header>
   );
 };

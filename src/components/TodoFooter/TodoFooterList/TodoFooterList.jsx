@@ -1,17 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import "./TodoFooterList.css";
-const TodoFooterList = ({ className }) => {
+import PropTypes from "prop-types";
+
+const TodoFooterList = ({ category, selectCategory }) => {
+  TodoFooterList.defaultProps = {
+    category: [],
+    selectCategory: () => {},
+  };
+  TodoFooterList.propTypes = {
+    category: PropTypes.array,
+    selectCategory: PropTypes.func,
+  };
   return (
-    <ul className={className}>
-      <li>
-        <button className="selected">All</button>
-      </li>
-      <li>
-        <button>Active</button>
-      </li>
-      <li>
-        <button>Completed</button>
-      </li>
+    <ul className="filters">
+      {category.map((item) => (
+        <li key={item.id}>
+          <button
+            className={item.className}
+            onClick={() => selectCategory(item.category)}
+          >
+            {item.name}
+          </button>
+        </li>
+      ))}
     </ul>
   );
 };
