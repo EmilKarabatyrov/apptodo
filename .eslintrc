@@ -1,15 +1,24 @@
 {
-  "extends": ["airbnb/base", "react-app", "react-app/jest"],
+  "extends": ["airbnb/base", "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings"],
   "env": {
     "browser": true,
     "es6": true,
     "node": true
   },
+  "plugins": ["react", "prettier", "import"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
   "rules": {
     "semi": "off",
     "no-plusplus": "off",
     "no-console": "off",
-    "no-unused-vars": "off",
     "quotes": "off",
     "eol-last": "off",
     "max-len": ["error", 150],
@@ -19,6 +28,13 @@
     "no-multiple-empty-lines": "off",
     "no-trailing-spaces": "off",
     "padded-blocks": "off",
-    "no-shadow": "off"
+    "no-shadow": "off",
+    "no-param-reassign": "off",
+    "import/newline-after-import": "off",
+    "import/order": "off",
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "import/no-extraneous-dependencies": "off",
+    "react/no-deprecated": "off"
   }
 }

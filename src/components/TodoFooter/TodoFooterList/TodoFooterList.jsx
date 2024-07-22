@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./TodoFooterList.css";
 import PropTypes from "prop-types";
 

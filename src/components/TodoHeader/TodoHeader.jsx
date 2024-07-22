@@ -9,7 +9,6 @@ const TodoHeader = ({ addTodo }) => {
   TodoHeader.propTypes = {
     addTodo: PropTypes.func,
   };
-
   const [value, setValue] = useState("");
   const addNewTodo = (e) => {
     e.preventDefault();

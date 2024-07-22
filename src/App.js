@@ -32,13 +32,22 @@ function App() {
 
   const [categoryTab] = useState([
     {
-      id: 1, name: "All", category: "all", className: "", 
+      id: 1,
+      name: "All",
+      category: "all",
+      className: "",
     },
     {
-      id: 2, name: "Active", category: false, className: "", 
+      id: 2,
+      name: "Active",
+      category: false,
+      className: "",
     },
     {
-      id: 3, name: "Completed", category: true, className: "", 
+      id: 3,
+      name: "Completed",
+      category: true,
+      className: "",
     },
   ]);
 

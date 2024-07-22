@@ -2,14 +2,17 @@ import React from "react";
 import TodoFooterList from "./TodoFooterList/TodoFooterList";
 import "./TodoFooter.css";
 import PropTypes from "prop-types";
+
 const TodoFooter = ({ category, selectCategory, deleteAllCompleted }) => {
   TodoFooter.defaultProps = {
     category: [],
     selectCategory: () => {},
+    deleteAllCompleted: () => {},
   };
   TodoFooter.propTypes = {
     category: PropTypes.array,
     selectCategory: PropTypes.func,
+    deleteAllCompleted: PropTypes.func,
   };
   return (
     <footer className="footer">

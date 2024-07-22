@@ -1,6 +1,6 @@
 import React from "react";
 import "./TodoTaskList.css";
-import { formatDistanceToNow } from "date-fns/formatDistanceToNow";
+import formatDistanceToNow from "date-fns/formatDistanceToNow";
 import PropTypes from "prop-types";
 const TodoTaskList = ({ tasks, onClick, onDelete }) => {
   TodoTaskList.defaultProps = {
@@ -37,7 +37,7 @@ const TodoTaskList = ({ tasks, onClick, onDelete }) => {
               className="icon icon-destroy"
             ></button>
           </div>
-          {/*<input type="text" className="edit" value="Editing task" />*/}
+          {/* <input type="text" className="edit" value="Editing task" /> */}
         </li>
       ))}
     </ul>
