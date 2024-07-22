@@ -23,7 +23,9 @@ const TodoFooter = ({
   };
   return (
     <footer className="footer">
-      <span className="todo-count">items left</span>
+      <span className="todo-count">
+        {tasks.filter((task) => !task.completed).length} items left
+      </span>
       <TodoFooterList selectCategory={selectCategory} category={category} />
       <button onClick={deleteAllCompleted} className="clear-completed">
         Clear completed
