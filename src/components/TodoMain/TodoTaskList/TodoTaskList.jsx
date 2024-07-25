@@ -1,7 +1,7 @@
-import React from "react";
-import "./TodoTaskList.css";
-import formatDistanceToNow from "date-fns/formatDistanceToNow";
-import PropTypes from "prop-types";
+import React from 'react';
+import './TodoTaskList.css';
+import formatDistanceToNow from 'date-fns/formatDistanceToNow';
+import PropTypes from 'prop-types';
 const TodoTaskList = ({ tasks, onClick, onDelete }) => {
   TodoTaskList.defaultProps = {
     tasks: [],
@@ -16,7 +16,7 @@ const TodoTaskList = ({ tasks, onClick, onDelete }) => {
   return (
     <ul className="todo-list">
       {tasks.map((item, index) => (
-        <li key={index + 1} className={item.completed ? "completed" : ""}>
+        <li key={index + 1} className={item.completed ? 'completed' : ''}>
           <div className="view">
             <input className="toggle" type="checkbox" />
             <label>
@@ -24,7 +24,7 @@ const TodoTaskList = ({ tasks, onClick, onDelete }) => {
                 {item.description}
               </span>
               <span className="created">
-                created{" "}
+                created{' '}
                 {formatDistanceToNow(item.createTime, {
                   addSuffix: true,
                   includeSeconds: true,
@@ -32,12 +32,8 @@ const TodoTaskList = ({ tasks, onClick, onDelete }) => {
               </span>
             </label>
             <button className="icon icon-edit"></button>
-            <button
-              onClick={() => onDelete(item.id)}
-              className="icon icon-destroy"
-            ></button>
+            <button onClick={() => onDelete(item.id)} className="icon icon-destroy"></button>
           </div>
-          {/* <input type="text" className="edit" value="Editing task" /> */}
         </li>
       ))}
     </ul>

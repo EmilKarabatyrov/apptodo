@@ -1,6 +1,6 @@
-import React from "react";
-import "./TodoFooterList.css";
-import PropTypes from "prop-types";
+import React from 'react';
+import './TodoFooterList.css';
+import PropTypes from 'prop-types';
 
 const TodoFooterList = ({ category, selectCategory }) => {
   TodoFooterList.defaultProps = {
@@ -15,10 +15,7 @@ const TodoFooterList = ({ category, selectCategory }) => {
     <ul className="filters">
       {category.map((item) => (
         <li key={item.id}>
-          <button
-            className={item.className}
-            onClick={() => selectCategory(item.category)}
-          >
+          <button className={item.className} onClick={() => selectCategory(item.category)}>
             {item.name}
           </button>
         </li>

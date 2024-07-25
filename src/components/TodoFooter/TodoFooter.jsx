@@ -1,14 +1,9 @@
-import React from "react";
-import TodoFooterList from "./TodoFooterList/TodoFooterList";
-import "./TodoFooter.css";
-import PropTypes from "prop-types";
+import React from 'react';
+import TodoFooterList from './TodoFooterList/TodoFooterList';
+import './TodoFooter.css';
+import PropTypes from 'prop-types';
 
-const TodoFooter = ({
-  category,
-  tasks,
-  selectCategory,
-  deleteAllCompleted,
-}) => {
+const TodoFooter = ({ category, tasks, selectCategory, deleteAllCompleted }) => {
   TodoFooter.defaultProps = {
     category: [],
     tasks: [],
@@ -23,9 +18,7 @@ const TodoFooter = ({
   };
   return (
     <footer className="footer">
-      <span className="todo-count">
-        {tasks.filter((task) => !task.completed).length} items left
-      </span>
+      <span className="todo-count">{tasks.filter((task) => !task.completed).length} items left</span>
       <TodoFooterList selectCategory={selectCategory} category={category} />
       <button onClick={deleteAllCompleted} className="clear-completed">
         Clear completed

@@ -1,27 +1,28 @@
-import React, { useEffect, useState } from "react";
-import "./styles/App.css";
-import TodoHeader from "./components/TodoHeader/TodoHeader";
-import TodoMain from "./components/TodoMain/TodoMain";
+import React, { useEffect, useState } from 'react';
+
+import './styles/App.css';
+import TodoHeader from './components/TodoHeader/TodoHeader';
+import TodoMain from './components/TodoMain/TodoMain';
 
 function App() {
   const [tasks, setTasks] = useState([
     {
       id: 1,
-      description: "Completed Task",
+      description: 'Completed Task',
       completed: false,
       count: 1,
       createTime: new Date(),
     },
     {
       id: 2,
-      description: "Editing task",
+      description: 'Editing task',
       completed: false,
       count: 1,
       createTime: new Date(),
     },
     {
       id: 3,
-      description: "Active task",
+      description: 'Active task',
       completed: false,
       count: 1,
       createTime: new Date(),
@@ -33,26 +34,26 @@ function App() {
   const [categoryTab] = useState([
     {
       id: 1,
-      name: "All",
-      category: "all",
-      className: "",
+      name: 'All',
+      category: 'all',
+      className: '',
     },
     {
       id: 2,
-      name: "Active",
+      name: 'Active',
       category: false,
-      className: "",
+      className: '' ,
     },
     {
       id: 3,
-      name: "Completed",
+      name: 'Completed',
       category: true,
-      className: "",
+      className: '',
     },
   ]);
 
   const selectCategory = (category) => {
-    if (category === "all") {
+    if (category   === 'all') {
       setCopyTask(tasks);
     } else {
       setCopyTask([...tasks].filter((task) => task.completed === category));
@@ -82,7 +83,7 @@ function App() {
           task.completed = !task.completed;
         }
         return task;
-      }),
+      })
     );
   };
 

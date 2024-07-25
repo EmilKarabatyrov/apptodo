@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import "./TodoHeader.css";
-import PropTypes from "prop-types";
+import React, { useState } from 'react';
+import './TodoHeader.css';
+import PropTypes from 'prop-types';
 
 const TodoHeader = ({ addTodo }) => {
   TodoHeader.defaultProps = {
@@ -9,11 +9,11 @@ const TodoHeader = ({ addTodo }) => {
   TodoHeader.propTypes = {
     addTodo: PropTypes.func,
   };
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState('');
   const addNewTodo = (e) => {
     e.preventDefault();
     addTodo(value);
-    setValue("");
+    setValue('');
   };
   return (
     <header className="header">
