@@ -1,7 +1,9 @@
 import React from 'react';
-import TodoFooterList from './TodoFooterList/TodoFooterList';
-import './TodoFooter.css';
 import PropTypes from 'prop-types';
+
+import TodoFooterList from './TodoFooterList/TodoFooterList';
+
+import './TodoFooter.css';
 
 const TodoFooter = ({ category, tasks, selectCategory, deleteAllCompleted }) => {
   TodoFooter.defaultProps = {

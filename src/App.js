@@ -42,7 +42,7 @@ function App() {
       id: 2,
       name: 'Active',
       category: false,
-      className: '' ,
+      className: '',
     },
     {
       id: 3,
@@ -53,7 +53,7 @@ function App() {
   ]);
 
   const selectCategory = (category) => {
-    if (category   === 'all') {
+    if (category === 'all') {
       setCopyTask(tasks);
     } else {
       setCopyTask([...tasks].filter((task) => task.completed === category));

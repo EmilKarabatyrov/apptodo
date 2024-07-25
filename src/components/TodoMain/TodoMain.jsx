@@ -1,8 +1,10 @@
 import React from 'react';
-import TodoTaskList from './TodoTaskList/TodoTaskList';
-import TodoFooter from '../TodoFooter/TodoFooter';
-import './TodoMain.css';
 import PropTypes from 'prop-types';
+
+import TodoFooter from '../TodoFooter/TodoFooter';
+
+import TodoTaskList from './TodoTaskList/TodoTaskList';
+import './TodoMain.css';
 
 const TodoMain = ({ tasks, onClick, onDelete, category, selectCategory, deleteAllCompleted }) => {
   TodoMain.defaultProps = {
