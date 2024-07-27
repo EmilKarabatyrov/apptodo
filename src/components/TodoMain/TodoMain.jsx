@@ -6,7 +6,7 @@ import TodoFooter from '../TodoFooter/TodoFooter';
 import TodoTaskList from './TodoTaskList/TodoTaskList';
 import './TodoMain.css';
 
-const TodoMain = ({ tasks, onClick, onDelete, category, selectCategory, deleteAllCompleted }) => {
+function TodoMain({ tasks, onClick, onDelete, category, selectCategory, deleteAllCompleted }) {
   TodoMain.defaultProps = {
     tasks: [],
     onClick: () => {},
@@ -17,10 +17,10 @@ const TodoMain = ({ tasks, onClick, onDelete, category, selectCategory, deleteAl
   };
 
   TodoMain.propTypes = {
-    tasks: PropTypes.array,
+    tasks: PropTypes.string,
     onClick: PropTypes.func,
     onDelete: PropTypes.func,
-    category: PropTypes.array,
+    category: PropTypes.string,
     selectCategory: PropTypes.func,
     deleteAllCompleted: PropTypes.func,
   };
@@ -35,6 +35,6 @@ const TodoMain = ({ tasks, onClick, onDelete, category, selectCategory, deleteAl
       />
     </section>
   );
-};
+}
 
 export default TodoMain;

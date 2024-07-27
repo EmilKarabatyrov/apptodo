@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './TodoHeader.css';
 import PropTypes from 'prop-types';
 
-const TodoHeader = ({ addTodo }) => {
+function TodoHeader({ addTodo }) {
   TodoHeader.defaultProps = {
     addTodo: () => {},
   };
@@ -24,11 +24,10 @@ const TodoHeader = ({ addTodo }) => {
           onChange={(e) => setValue(e.target.value)}
           className="new-todo"
           placeholder="What needs to be done?"
-          autoFocus
         />
       </form>
     </header>
   );
-};
+}
 
 export default TodoHeader;

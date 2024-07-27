@@ -73,17 +73,17 @@ function App() {
       createTime: new Date(),
     };
     setTasks([...tasks, newTask]);
-    console.log(tasks);
   };
 
   const completeTask = (id) => {
     setTasks(
       tasks.filter((task) => {
         if (task.id === id) {
-          task.completed = !task.completed;
+          // eslint-disable-next-line no-param-reassign
+          task.completed = !task.completed
         }
         return task;
-      })
+      }),
     );
   };
 
